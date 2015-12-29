@@ -27,7 +27,7 @@ int main(int argc, char **argv) {
 
   // Construct a group containing all of the prime ranks in world_group
   MPI_Group prime_group;
-  MPI_Group_incl(world_group, 7, ranks, &prime_group);
+  MPI_Group_incl(world_group, n, ranks, &prime_group);
 
   // Create a new communicator based on the group
   MPI_Comm prime_comm;
